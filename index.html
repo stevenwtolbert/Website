@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Steven W. Tolbert</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Steven W. Tolbert</a></li>
+							<li><a href="#two">Tech Demos</a></li>
+							<li><a href="#three">Get in touch</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Steven W. Tolbert</h1>
+							<p>Personal site powered by AWS serverless technology.</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Learn more</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/pic01.png" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Steven W. Tolbert, Data Scientist</h2>
+									<p>Dedicated to turning research into success.</p>
+									<ul class="actions">
+										<li><a href="about_me.html" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>NextEra Energy Shark Tank Victor</h2>
+									<p>2019 Shark Tank winning team recieving over 250k in the form of a research grant to explore machine learning applications for grid-level event reconstruction.</p>
+									<ul class="actions">
+										<li><a href="shark_tank.html" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>2019 Hackathon Challanger</h2>
+									<p>2019 Second place victory at internal hackathon for providing a serverless solution to tagging metadata within video content for machine learning applications</p>
+									<ul class="actions">
+										<li><a href="about_me.html" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Tech Demos</h2>
+							<p>The following section is a playground of tech demos showing various machine learning algorthims, models, and dashboards deployed at scale using the AWS platform. All the code is deployed in a serverless fashion when possible ensuring high availability and low costs.</p>
+							<div class="features">
+								<section>
+									<span class="icon solid major fa-comment"></span>
+									<h3>Natural Language Processing</h3>
+									<div class="field">
+										<p>Type and submit a sentence for state of the art NLP to sentemize it using lambda functions and BERT.</p>
+										<a href="nlp.html" class="button">Sentimize Sentences!</a>
+									</div>
+									
+								</section>
+								<section>
+									<span class="icon solid major fa-desktop"></span>
+									<h3>Severless Dashboarding</h3>
+									<p>Demo deployment of as dashboard in a "serverless" fashion using EC2s, lambda, and API Gateway.</p>
+									<p>
+										<form action="https://w1p6c1yxk1.execute-api.us-east-1.amazonaws.com/launch-ec2v1" method="get">
+								    	<input type="submit" value="Dashboard" 
+								         name="Submit" id="launch_dashboard_api" />
+										</form>							
+									</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-cog"></span>
+									<h3>Computer Vision</h3>
+									<p>The self-flying drone project. In progress.</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<h3>Serverless Contact Form</h3>
+									<p>How to build a serverless contact form using API Gateway, Lambda, SES, and S3</p>
+									<ul class="actions">
+										<li><a href="contact_form.html" class="button">Learn more</a></li>
+									</ul>
+								</section>
+								<section>
+									<span class="icon solid major fa-atom"></span>
+									<h3>Physics Projects and Notes</h3>
+									<p>Notes and solutions to various physics texts.</p>
+									<ul class="actions">
+										<li><a href="notes.html" class="button">Learn more</a></li>
+									</ul>
+								</section>
+								<section>
+									<span class="icon solid major fa-brain"></span>
+									<h3>Deep Learning Paper Implementations</h3>
+									<p>Implementation of several key deep learning papers.</p>
+									<ul class="actions">
+										<li><a href="deep_learning_papers.html" class="button">Learn more</a></li>
+									</ul>
+								</section>
+							</div>
+							<ul class="actions">
+								<li><a href="projects.html" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Get in touch</h2>
+							<p>Feel free to contact me at any time regarding exciting opportunities or for questions.</p>
+							<p>The form you are submitting on is running using API Gateway, Lambda, SES and S3 for a serverless email contact form solution.</p>
+							<p>For more information click <a href = "contact_form.html">here</a></p>
+							<div class="split style1">
+								<section>
+								<form id="contact-form" method="post">
+								<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" id="name-input" placeholder="Enter name here…" class="form-control"  />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="email" id="email-input" placeholder="Enter email here…" class="form-control" />
+										</div>
+										<div class="field">
+											<label for="description-input">Message</label>
+											<textarea id="description-input" rows="5" placeholder="Enter your message…" class="form-control" ></textarea>
+										</div>
+									</div>
+								<button type="button" onClick="submitToAPI(event)" class="btn btn-lg">Submit</button>
+								</form>
+								
+								</section>
+
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<span>Quantum Lake Villas<br />
+											Boynton Beach, FL<br />
+											USA</span>
+										</li>
+										<li>
+											<h3>Email</h3>
+											<a href="#">contact@stevenwtolbert.com</a>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<span>(561) 674-4639</span>
+										</li>
+										<li>
+											<h3>Social</h3>
+											<ul class="icons">
+												<li><a href="https://twitter.com/Steven481561" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+												<li><a href="https://github.com/stolbert481" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="https://www.linkedin.com/in/steven-tolbert/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+											</ul>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+			function submitToAPI(e) {
+	        e.preventDefault();
+	        var URL = "https://2zfsbo2m48.execute-api.us-east-1.amazonaws.com/contact-form-v1";
+			var name = $("#name-input").val();
+			var email = $("#email-input").val();
+			var desc = $("#description-input").val();
+			var data = {
+			name : name,
+			email : email,
+			desc : desc
+	        };
+
+	       $.ajax({
+	         type: "POST",
+	         url : URL,
+	         dataType: "json",
+	         crossDomain: "true",
+	         contentType: "application/json; charset=utf-8",
+	         data: JSON.stringify(data),
+
+	         
+	         success: function () {
+	           // clear form and show a success message
+	           console.log('send_successful')
+	           document.getElementById("contact-form").reset();
+	       location.reload();
+	         },
+	         error: function () {
+	           // show an error message
+	           console.log('send_failed')
+	         }});
+	     }
+
+			</script>
+			<script>
+			function submitToSentimizer(e) {
+	        e.preventDefault();
+	        var URL = "https://gqmsbjo3dl.execute-api.us-east-1.amazonaws.com/nlp-sentiment-analysis-demo";
+			var body = $("#textToSentimize").val();
+			var data = {
+			desc : body
+	        };
+
+	       $.ajax({
+	         type: "POST",
+	         url : URL,
+	         dataType: "json",
+	         crossDomain: "true",
+	         contentType: "application/json; charset=utf-8",
+	         data: JSON.stringify(data),
+
+	         
+	         success: function () {
+	           // clear form and show a success message
+	           console.log('send_successful')
+	           document.getElementById("contact-form").reset();
+	       location.reload();
+	         },
+	         error: function () {
+	           // show an error message
+	           console.log('send_failed')
+	         }});
+	     }
+
+			</script>
+
+
+	</body>
+</html>
