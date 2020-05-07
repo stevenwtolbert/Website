@@ -33,10 +33,27 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<span class="image fit"><img src="images/shark_tank_wide.png" alt="" /></span>
-							<h1 class="major">2019 NextEra Energy Shark Tank Victory</h1>
-							<p>Your message is predicted to have a sentiment of: </p>
+							<h1 class="major">Building dashboards with minimal servers.</h1>
+							<p>Over the course of several data science projects one finds that eventually you will need to express results to the business in a clear and concise way that encapsulates your models observations and does so in a visaually appealing way. This is where the skill of dashboarding comes in. As data scientists, our weapon of choice is Dash, a flask based dashboarding tool that allows you to display the full power of python in a web-app based dashboard.</p>
 
+							<p>Now there is some skill involved when bringing Dash from your laptop to a scalable web-app that others can access. Traditionally we would need to spin up a server and have it hosted there 24/7 meaning big costs for a simple app if we're not using the server for anything else. The magic of AWS allows us to negate most of these costs in a few different ways.</p>
+							<h2>The "serverless" EC2 method</h2>
+							<p>Wait a second, I thought this was SERVERLESS dashboarding, why would we be spining up servers? Well, I would like you to consider this option as a very cost efficent method of hosting dashboards in the spirit of serverless architecture. In this method we do the following</p>
+							<li>We create the dash app on an EC2 instance and create scripts to run the web server when the instance is started</li>
+							<li>Have an API using API Gateway that takes in a post request that calls a lambda function turns on the EC2</li>
+							<li>The lambda function also writes to SQS with a time delay of 10 minutes </li>
+							<li>The EC2 is started and executes its launch scripts to turn on the web server</li>
+							<li>On the backend we use ALB to manage load for the server to make it scalable and highly-available</li>
+							<li>The end user can then fire an API get request is launched to get the EC2 ip adderess and redirect to the dashboard</li>
+							<li>Anoter lambda is triggerd on the SQS message (10 minutes later) to turn off the EC2</li>
+							<p>With this architechture you have essentially built a nice pay for what you use dashboard that is great for short 10-15 minute looks at data, by actually clicking on the link to get here you have fired the API request to turn on the EC2 which is now visible here: <a href = "">DASHBOARD</a></p>
+							<p>There are some problems with this method, mainily that you are bound to a "cold-start" when you need to see the dashboard, which could be potentially minutes of time.</p>
+
+							<h2>AWS Fargate and ECS</h2>
+							<p>This one has you run docker containers with ECS</p>
+
+							<h2>AWS EBS </h2>
+							<p>This one has you run docker containers with EBS and $</p>
 
 
 						</div>
