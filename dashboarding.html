@@ -46,14 +46,13 @@
 							<li>On the backend we use ALB to manage load for the server to make it scalable and highly-available</li>
 							<li>The end user can then fire an API get request is launched to get the EC2 ip adderess and redirect to the dashboard</li>
 							<li>Anoter lambda is triggerd on the SQS message (10 minutes later) to turn off the EC2</li>
-							<p>With this architechture you have essentially built a nice pay for what you use dashboard that is great for short 10-15 minute looks at data, by actually clicking on the link to get here you have fired the API request to turn on the EC2 which is now visible here: <a href = "">DASHBOARD</a></p>
+							<p>With this architechture you have essentially built a nice "pay for what you use" dashboard that is great for short 10-15 minute looks at data, by actually clicking on the link to get here you have fired the API request to turn on the EC2 which is now visible here: <a href = "">DASHBOARD</a></p>
 							<p>There are some problems with this method, mainily that you are bound to a "cold-start" when you need to see the dashboard, which could be potentially minutes of time.</p>
 
-							<h2>AWS Fargate and ECS</h2>
-							<p>This one has you run docker containers with ECS</p>
+							<h2>Container based solutions</h2>
+							<p>While the above option is attractive for low traffic dashboarding, it becomes far less attractive when we require a more scalable solution without the worries of server upkeep. This is where Fargate, EBS, and ECS comes into play. Using these AWS tools we can create a docker image of our dash code, which we then upload to ECR and run it on AWS fargate using ECS. </p>
 
-							<h2>AWS EBS </h2>
-							<p>This one has you run docker containers with EBS and $</p>
+						
 
 
 						</div>
