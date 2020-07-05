@@ -37,29 +37,30 @@
 						<div class="inner">
 							<h1 class="major">Loss Functions</h1>
 							<h3>Loss Functions for Regression</h3>
-							<p>One of the first loss functions we're introduced to in machine learning for regression tasks is the mean squared error (MSE). To understand MSE first we must understand error. Error describes how far away our predictions stray from the true value i.e. error = (target-prediction). More mathematically, we can describe our target value as \(y_{i}\) which describes the ground truth value for instance i. We can then define our predicted value for that insatnce as \(p_{i})\.</p>
+							<p>One of the first loss functions we're introduced to in machine learning for regression tasks is the mean squared error (MSE). To understand MSE first we must understand error. Error describes how far away our predictions stray from the true value i.e. error = (target-prediction). More mathematically, we can describe our target value as \(y_{i}\) which describes the ground truth value for instance i. We can then define our predicted value for that insatnce as \(\hat{y}_{i}\).</p>
 
-							<p>$$Error = y_{i}-p_{i}$$
+							<p>$$Error = y_{i}-\hat{y}_{i}$$</p>
 
 							<p>
 							For MSE we square the error term as this creates a quadratic learning surface that guarantees convergence when optimizing our function. As with all loss functions, we want to know the error over all instances therefore we sum over all squared errors, and then divide it by the number of instances to get an idea of how much each instance is contributing to the error on average.</p>
 
-							<p>$$MSE =\frac{1}{N}\sum_{i=0}^{N} (y_{i}-p_{i})^{2}$$</p>
+							<p>$$MSE =\frac{1}{N}\sum_{i=0}^{N} (y_{i}-\hat{y}_{i})^2$$</p>
 
 							<p>
 							When using the MSE loss function it is assumed that the distribution of our target variable is Gaussian, which applies to a large class of problems. It is also common to calculate the root mean squared error (RMSE) which is simply the square root of the MSE which provides the standard deviation of the MSE. </p>
 
-							<p>$$RMSE = \sqrt{\frac{1}{N}\sum_{i=0}^{N} (y_{i}-p_{i})^{2}}$$</p>
+							<p>$$RMSE =\sqrt{\frac{1}{N}\sum_{i=0}^{N} (y_{i}-\hat{y}_{i})}$$</p>
 
 
 							<p>The problems with these loss function however arise when the spread of values for target variable is large. For example, given a regression problem where our target variable ranges from 1 to 1 million we can produce very large error terms that are further compounded by the squaring of the error. It is the case then, when your target variable has a large spread, the mean squared logarithmic error (MSLE) loss becomes more suitable.</p>
-
-							<p>$$MSLE =\frac{1}{N}\sum_{i=0}^{N} (ln(y_{i})-ln(p_{i})^{2}$$</p>
+							
 
 							<p>MSLE is calculated the same as MSE with the exception that now we're taking the natural log the predicted quantity (special care must be taken if your values include zero due to the nature of logs at zero) which of course reduces the penalty for numerically large errors.</p>
 
+							<p>$$MSLE =\frac{1}{N}\sum_{i=0}^{N} (ln(y_{i})-ln(\hat{y}_{i}))^{2}$$</p>
+
 							<p> If your target variable is mostly Gaussian with the exception of a few outliers the mean absolute error (MAE) becomes more suitable. With MAE you are now you're calculating the absolute value of the error which provides a loss function more robust to outliers and doesn't penalize large errors as harshly due to no longer using the squared error.</p>
-							<p>$$MAE =\frac{1}{N}\sum_{i=0}^{N} |y_{i}-p_{i}|$$</p>
+							<p>$$MAE =\frac{1}{N}\sum_{i=0}^{N} |y_{i}-\hat{y}_{i}|$$</p>
 
 							<h3>Loss Functions for Classification</h3>
 							<p>For classification tasks cross-entropy becomes a more suitable loss function. In short, cross-entropy describes the similatrity between your prediction and target variable vectors and attempts to minimize this error. For binary and mulit-class classifaction we can write this loss function as the sum of entropies for each class with respect to the target and predicted varaibles.</p>
