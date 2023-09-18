@@ -23,8 +23,7 @@
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
 							<li><a href="#one">Steven W. Tolbert</a></li>
-							<li><a href="#two">Tech Demos</a></li>
-							<li><a href="#three">Get in touch</a></li>
+							<li><a href="#two">Projects</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -90,46 +89,10 @@
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>Tech Demos</h2>
-							<p>The following section is a playground of tech demos showing various machine learning algorthims, models, and dashboards deployed at scale using the AWS platform. All the code is deployed in a serverless fashion when possible ensuring high availability and low costs.</p>
+							<h2>Projects</h2>
+							<p>The following section details some work that I've found interesting.</p>
 							<div class="features">
-								<section>
-									<span class="icon solid major fa-comment"></span>
-									<h3>Natural Language Processing</h3>
-									<div class="field">
-										<p>Details of work done in NLP.</p>
-										<a href="nlp.html" class="button">Learn more</a>
-									</div>
-									
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Severless Dashboarding</h3>
-									<p>Details of work done in Dashboarding</p>
-									<p>
-										<!--<form action="https://w1p6c1yxk1.execute-api.us-east-1.amazonaws.com/launch-ec2v1" method="get">
-								    	<input type="submit" value="Launch Dashboard!" 
-								         name="Submit" id="launch_dashboard_api" />
-										</form>-->
-										<a href="dashboarding.html" class="button">Learn more</a>							
-									</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Computer Vision</h3>
-									<p>Details on work done for computer vision projects such as real time threat detection and AI for self driving cars.</p>
-									<ul class="actions">
-										<li><a href="computer_vision_project.html" class="button">Learn more</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Serverless Contact Form</h3>
-									<p>How to build a serverless contact form using API Gateway, Lambda, SES, and S3</p>
-									<ul class="actions">
-										<li><a href="contact_form.html" class="button">Learn more</a></li>
-									</ul>
-								</section>
+		
 								<section>
 									<span class="icon solid major fa-atom"></span>
 									<h3>Physics Projects and Notes</h3>
@@ -151,51 +114,15 @@
 						</div>
 					</section>
 
-<!-- 				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Feel free to contact me at any time regarding exciting opportunities or for questions.</p>
-							<p>The form you are submitting on is running using API Gateway, Lambda, SES and S3 for a serverless email contact form solution.</p>
-							<p>For more information click <a href = "contact_form.html">here</a></p>
-							<div class="split style1">
-								<section>
-								<form id="contact-form" method="post">
-								<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" id="name-input" placeholder="Enter name here…" class="form-control"  />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="email" id="email-input" placeholder="Enter email here…" class="form-control" />
-										</div>
-										<div class="field">
-											<label for="description-input">Message</label>
-											<textarea id="description-input" rows="5" placeholder="Enter your message…" class="form-control" ></textarea>
-										</div>
-									</div>
-								<button type="button" onClick="submitToAPI(event)" class="btn btn-lg">Submit</button>
-								</form>
-								
-								</section>
 
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Geographic Area</h3>
-											<span>Boca Raton, FL<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">contact@stevenwtolbert.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(561) 674-4639</span>
-										</li>
-										<li>
+
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>
 											<h3>Social</h3>
 											<ul class="icons">
 												<li><a href="https://twitter.com/stevenwtolbert" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -204,19 +131,6 @@
 												<li><a href="https://www.linkedin.com/in/steven-tolbert/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 											</ul>
 										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
-			</div> -->
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>
@@ -230,71 +144,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-			function submitToAPI(e) {
-	        e.preventDefault();
-	        var URL = "https://2zfsbo2m48.execute-api.us-east-1.amazonaws.com/contact-form-v1";
-			var name = $("#name-input").val();
-			var email = $("#email-input").val();
-			var desc = $("#description-input").val();
-			var data = {
-			name : name,
-			email : email,
-			desc : desc
-	        };
-
-	       $.ajax({
-	         type: "POST",
-	         url : URL,
-	         dataType: "json",
-	         crossDomain: "true",
-	         contentType: "application/json; charset=utf-8",
-	         data: JSON.stringify(data),
-
-	         
-	         success: function () {
-	           // clear form and show a success message
-	           console.log('send_successful')
-	           document.getElementById("contact-form").reset();
-	       location.reload();
-	         },
-	         error: function () {
-	           // show an error message
-	           console.log('send_failed')
-	         }});
-	     }
-
-			</script>
-			<script>
-			function submitToSentimizer(e) {
-	        e.preventDefault();
-	        var URL = "https://gqmsbjo3dl.execute-api.us-east-1.amazonaws.com/nlp-sentiment-analysis-demo";
-			var body = $("#textToSentimize").val();
-			var data = {
-			desc : body
-	        };
-
-	       $.ajax({
-	         type: "POST",
-	         url : URL,
-	         dataType: "json",
-	         crossDomain: "true",
-	         contentType: "application/json; charset=utf-8",
-	         data: JSON.stringify(data),
-
-	         
-	         success: function () {
-	           // clear form and show a success message
-	           console.log('send_successful')
-	           document.getElementById("contact-form").reset();
-	       location.reload();
-	         },
-	         error: function () {
-	           // show an error message
-	           console.log('send_failed')
-	         }});
-	     }
-
-			</script>
+			
 
 
 	</body>
